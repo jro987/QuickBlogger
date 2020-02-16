@@ -1,0 +1,10 @@
+<br>
+<h2><%= @post.title %></h2>
+<p><%= @post.body %></p>
+<%= link_to "Edit Post", edit_post_path(@post), :class => 'btn btn-primary' %>
+<%= link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-secondary' %>
+<br><br>
+<hr>
+<%= render 'comments/comments' %>
+<br>
+<%= render 'comments/form' %>
